@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zefoy/ngx-dropzone-wrapper.git"
+    "url": "https://github.com/siamskoi/ngx-dropzone-wrapper.git"
   },
   "dependencies": {
-    "dropzone": "^5.5.0"
+    "dropzone": "github:siamskoi/dropzone"
   },
   "devDependencies": {
     "@angular/cli": "^8.0.0",

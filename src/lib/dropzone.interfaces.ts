@@ -61,6 +61,7 @@ export interface DropzoneConfigInterface {
   renameFile?: DropzoneRenameFileFunction,
   transformFile?: DropzoneTransformFileFunction,
   chunksUploaded?: DropzoneChunksUploadedFunction,
+  customUpload?: DropzoneCustomUploadFunction,
 
   withCredentials?: boolean,
 
@@ -138,6 +139,7 @@ export class DropzoneConfig implements DropzoneConfigInterface {
   renameFile?: DropzoneRenameFileFunction;
   transformFile?: DropzoneTransformFileFunction;
   chunksUploaded?: DropzoneChunksUploadedFunction;
+  customUpload?: DropzoneCustomUploadFunction;
 
   withCredentials?: boolean;
 
@@ -230,3 +232,4 @@ export type DropzoneResizeFunction = (file: File, width: number, height: number,
 export type DropzoneRenameFileFunction = (file: File) => string;
 export type DropzoneTransformFileFunction = (file: File, done: Function) => any;
 export type DropzoneChunksUploadedFunction = (file: File, done: Function) => any;
+export type DropzoneCustomUploadFunction = (files: any, dataBlocks: any) => any;
