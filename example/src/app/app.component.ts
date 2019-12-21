@@ -15,6 +15,7 @@ export class AppComponent {
   public disabled: boolean = false;
 
   public config: DropzoneConfigInterface = {
+    addRemoveLinks: true,
     clickable: true,
     maxFiles: 1,
     autoReset: null,
@@ -50,6 +51,7 @@ export class AppComponent {
   }
 
   public resetDropzoneUploads(): void {
+    console.log('Reset');
     if (this.type === 'directive' && this.directiveRef) {
       this.directiveRef.reset();
     } else if (this.type === 'component' && this.componentRef && this.componentRef.directiveRef) {
@@ -67,5 +69,9 @@ export class AppComponent {
 
   public onUploadSuccess(args: any): void {
     console.log('onUploadSuccess:', args);
+  }
+
+  public test(data: any) {
+    console.log('Test');
   }
 }
